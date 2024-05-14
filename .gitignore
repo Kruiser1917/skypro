@@ -1,0 +1,27 @@
+# Игнорирование директорий виртуального окружения
+venv/
+.env
+__pycache__/
+
+# Игнорирование файлов IDE PyCharm
+.idea/
+
+# Игнорирование файлов и директорий логов
+*.log
+*.pyc
+
+# Игнорирование артефактов сборки
+dist/
+build/
+*.egg-info/
+
+git add .
+git commit -m "Добавлен .gitignore"
+git add src/masks.py
+git commit -m "Обновлен модуль masks с новыми функциями"
+git add src/widget.py
+git commit -m "Добавлены функции в модуль widget для маскировки и форматирования дат"
+
+git rm --cached <имя_файла>
+
+git commit -m "Удалены игнорируемые файлы из репозитория"
