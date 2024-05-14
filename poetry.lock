@@ -31,6 +31,19 @@ files = [
     {file = "black-24.4.2.tar.gz", hash = "sha256:c872b53057f000085da66a19c55d68f6f8ddcac2642392ad3a355878406fbd4d"},
 ]
 
+[tool.black]
+line-length = 119
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.venv
+  | __pycache__
+)/
+'''
+
+[tool.isort]
+profile = "black"
+
 [package.dependencies]
 click = ">=8.0.0"
 mypy-extensions = ">=0.4.3"

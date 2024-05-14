@@ -20,7 +20,7 @@ def universal_masking(input_data: str) -> str:
         masked_number = mask_account_number(account_number)
         return f"{' '.join(parts[:-1])} {masked_number}"
     else:
-        card_number = ''.join(parts[-4:])
+        card_number = "".join(parts[-4:])
         if len(card_number) == 16:
             masked_number = mask_card_number(card_number)
             return f"{' '.join(parts[:-4])} {masked_number[:4]} {masked_number[5:7]}{masked_number[7:9]} {masked_number[10:14]} {masked_number[15:]}"
@@ -30,6 +30,7 @@ def universal_masking(input_data: str) -> str:
 
 # Функция для преобразования строки с датой и временем в формате
 # ISO в строку даты в формате DD.MM.YYYY
+
 
 def format_datetime_to_date(datetime_str: str) -> str:
     """
@@ -59,7 +60,7 @@ test_inputs = [
     "Счет 73654108430135874305",
     "MasterCard 7158 3007 3472 6758",
     "Счет 35383033474447895560",
-    "Visa Classic 6831 9824 7673 7658"
+    "Visa Classic 6831 9824 7673 7658",
 ]
 
 for test_input in test_inputs:

@@ -34,6 +34,4 @@ def mask_account_number(account_number: str) -> str:
     if len(account_number) >= 4 and account_number.isdigit():
         return f"**{account_number[-4:]}"
     else:
-        raise ValueError(
-            "Неверный номер счета. Номер счета должен содержать минимум 4 цифры."
-        )
+        raise ValueError("Неверный номер счета. Номер счета должен содержать минимум 4 цифры.")
