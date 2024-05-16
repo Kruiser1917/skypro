@@ -22,7 +22,7 @@ def universal_masking(input_data: str) -> str:
     else:
         card_number = "".join(parts[-4:])
         if len(card_number) == 16:
-            masked_number = mask_card_number(card_number)
+            masked_number: str = mask_card_number(card_number)
             return f"{' '.join(parts[:-4])} {masked_number[:4]} {masked_number[5:7]}{masked_number[7:9]} {masked_number[10:14]} {masked_number[15:]}"
         else:
             return f"{' '.join(parts[:-4])} Card number must be exactly 16 digits long"
